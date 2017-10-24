@@ -1,0 +1,272 @@
+<html>
+<head>
+<title>diptasoft hotspot > status</title>
+$(if refresh-timeout)
+<meta http-equiv="refresh" content="$(refresh-timeout-secs)">
+$(endif)
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="expires" content="-1" />
+
+  <!-- CSS -->
+  
+  <link rel="stylesheet" href="assets/bootstrap/bootstrap.css">
+  <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/form-elements.css">
+  <link rel="stylesheet" href="assets/style.css">
+
+<script language="JavaScript">
+<!--
+$(if advert-pending == 'yes')
+    var popup = '';
+    function focusAdvert() {
+	if (window.focus) popup.focus();
+    }
+    function openAdvert() {
+	popup = open('$(link-advert)', 'hotspot_advert', '');
+	setTimeout("focusAdvert()", 1000);
+    }
+$(endif)
+    function openLogout() {
+	if (window.name != 'hotspot_status') return true;
+        open('$(link-logout)', 'hotspot_logout', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=280,height=250');
+	window.close();
+	return false;
+    }
+//-->
+</script>
+</head>
+<body 
+$(if advert-pending == 'yes')
+	onLoad="openAdvert()"
+$(endif)
+>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+	var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+	(function(){
+	var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+	s1.async=true;
+	s1.src='https://embed.tawk.to/59e1d2d2c28eca75e4626016/default';
+	s1.charset='UTF-8';
+	s1.setAttribute('crossorigin','*');
+	s0.parentNode.insertBefore(s1,s0);
+	})();
+	</script>
+	<!--End of Tawk.to Script-->
+ <!-- Top content -->
+ <div class="top-content">
+		
+		<div class="inner-bg">
+			<div class="container">
+				
+				<div class="row">
+					<div class="col-sm-8 col-sm-offset-2 text">
+						<h1><strong>tukangcoding</strong> hotspot</h1>
+						<div class="description hide">
+							<p>
+								This is a free responsive <strong>"login and register forms"</strong> template made with Bootstrap. 
+								Download it on , 
+								customize and use it as you like!
+							</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-sm-8 col-sm-offset-2">
+						<ul class="nav nav-tabs" role="tablist">
+							<li class="nav-item active">
+								<a class="nav-link active" data-toggle="tab" href="#home" role="tab">Status</a>
+							</li>
+							<li class="nav-item ">
+								<a class="nav-link" data-toggle="tab" href="#hrg" role="tab">Paket</a>
+							</li>
+							<!--<li class="nav-item">
+								<a class="nav-link" data-toggle="tab" href="#reg" role="tab">Daftar</a>
+							</li>-->
+							<li class="nav-item">
+								<a class="nav-link" data-toggle="tab" href="#contact" role="tab">Kami</a>
+							</li>
+						</ul>
+						<!-- TAB Content -->
+						<div class="tab-content">
+							<!-- START LOGIN -->
+							<div class="tab-pane active" id="home" role="tabpanel">
+								<div class="form-box">
+									<div class="form-top">
+										<div class="form-top-left">
+											<h3>Status Penggunaan</h3>
+											
+										</div>
+										<div class="form-top-right">
+											<i class="fa fa-check"></i>
+										</div>
+									</div>
+									<div class="form-bottom">
+										<div class="row">
+											<div class="col-lg-12">
+												<!-- PRICE ITEM -->
+												<form action="$(link-logout)" name="logout" onSubmit="return openLogout()">
+													
+												<div class="panel price panel-green">
+													<div class="panel-body text-center">
+														$(if login-by == 'trial')
+															<p class="lead"><strong>trial..!!</strong></p>
+														$(elif login-by != 'mac')
+															<p class="lead"><strong>$(username)</strong></p>												
+														$(endif)
+													</div>                                                        
+													<ul class="list-group list-group-flush text-center">
+															<li class="list-group-item"><i class="icon-ok text-danger"></i>$(ip)</li>
+															<li class="list-group-item"><i class="icon-ok text-danger"></i>$(mac)</li>
+															<li class="list-group-item"><i class="icon-ok text-danger"></i>$(uptime)</li>
+															<li class="list-group-item"><i class="icon-ok text-danger"></i>$(bytes-in-nice) / $(bytes-out-nice)</li>
+															<li class="list-group-item"><i class="icon-ok text-danger"></i>$(uptime) / $(session-time-left)</li>
+															
+													</ul>
+													$(if login-by-mac != 'yes')
+													<div class="panel-footer">
+														<input class="btn btn-lg btn-block btn-warning"  type="submit" value="log off">
+													</div>    
+													$(endif)
+												</div>
+												<!-- /PRICE ITEM -->     
+												</form>                                           
+											</div>
+										</div>	
+									</div>
+								</div>
+							</div>
+							<!-- END LOGIN -->
+							
+
+							<!-- START HRG -->
+							<div class="tab-pane " id="hrg" role="tabpanel">
+								<div class="form-box">
+									<div class="form-top">
+										<div class="form-top-left">
+											<h3>Paket</h3>
+											<!--<p>Fill in the form below to get instant access:</p>-->
+										</div>
+										<div class="form-top-right">
+											<i class="fa fa-money"></i>
+										</div>
+									</div>
+									<div class="form-bottom" style="color:#FFF">
+										<div class="row">
+											<div class="col-sm-6 col-md-6 col-lg-6">
+												<!-- PRICE ITEM -->
+												<div class="panel price panel-green">
+													<div class="panel-body text-center">
+														<p class="lead" ><strong>free wifi</strong></p>
+													</div>                                                        
+													<ul class="list-group list-group-flush text-center">
+															<li class="list-group-item"><i class="icon-ok text-danger"></i> Pengunaan 15 menit</li>
+															<li class="list-group-item"><i class="icon-ok text-danger"></i> Unlimited quota</li>
+															<li class="list-group-item"><i class="icon-ok text-danger"></i> kecepatan 5mbps</li>
+													</ul>
+													
+												</div>
+												<!-- /PRICE ITEM -->                                                
+											</div>
+											<div class="col-sm-3 col-md-6 col-lg-6">
+												<!-- PRICE ITEM -->
+												<div class="panel price panel-blue">
+													<div class="panel-body text-center">
+														<p class="lead" ><strong>Rp.5000 / 12jam</strong></p>
+													</div>                                                        
+													<ul class="list-group list-group-flush text-center">
+														<li class="list-group-item"><i class="icon-ok text-danger"></i> Penggunaan 12jam</li>
+														<li class="list-group-item"><i class="icon-ok text-danger"></i> Unlimited quota</li>
+														<li class="list-group-item"><i class="icon-ok text-danger"></i> kecepatan 1mbps</li>
+													</ul>                                                            
+												</div>
+												<!-- /PRICE ITEM -->                                                
+											</div>
+												
+										</div>
+									</div>
+								</div>
+
+							</div>
+
+							
+							
+							<div class="tab-pane " id="contact" role="tabpanel">
+									<div class="form-box">
+										<div class="form-top">
+											<div class="form-top-left">
+												<h3>Hubungi kami</h3>
+												<p>Informasi lebih lanjut:</p>
+											</div>
+											<div class="form-top-right">
+												<i class="fa fa-phone"></i>
+											</div>
+										</div>
+										<div class="form-bottom" style="color:#FFF">
+											<div class="row">
+												<div class="col-sm-8">
+													<h4>Lokasi:</h4>
+												</div>
+												<div class="col-sm-4">
+														<p><i class="fa fa-phone"></i> 085771838355</p>
+														<p><i class="fa fa-phone"></i> 082227965900</p>
+														<p><i class="fa fa-envelope"></i> diptasoft@gmail.com</p>
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+
+
+
+							</div>
+
+
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+	<!-- Footer -->
+	<footer>
+		<div class="container">
+			<div class="row">
+				
+				<div class="col-sm-8 col-sm-offset-2">
+					<div class="footer-border"></div>
+					<p><a href="http://tukangcoding.net" target="_blank"><strong>tukangcoding.net</strong></a> 
+						<br/>RT/RW Net internet murah meriah. <i class="fa fa-smile-o"></i></p>
+				</div>
+				
+			</div>
+		</div>
+	</footer>
+
+
+<!-- Javascript -->
+        <script src="assets/js/jquery-1.11.1.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+		<script src="assets/js/jquery.backstretch.min.js"></script>
+		
+		<script>
+			jQuery(document).ready(function() {
+				$.backstretch("assets/img/backgrounds/1.jpg");
+			});
+		
+		
+		</script>
+
+</body>
+</html>

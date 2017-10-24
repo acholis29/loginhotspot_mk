@@ -1,0 +1,343 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="pragma" content="no-cache" />
+		<meta http-equiv="expires" content="-1" />
+		
+        <title>Login Hotspot</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="assets/bootstrap/bootstrap.css">
+        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="assets/css/form-elements.css">
+        <link rel="stylesheet" href="assets/style.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="assets/ico/favicon.png">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+    </head>
+
+    <body>
+    
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+	var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+	(function(){
+	var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+	s1.async=true;
+	s1.src='https://embed.tawk.to/59e1d2d2c28eca75e4626016/default';
+	s1.charset='UTF-8';
+	s1.setAttribute('crossorigin','*');
+	s0.parentNode.insertBefore(s1,s0);
+	})();
+	</script>
+	<!--End of Tawk.to Script-->
+		$(if chap-id)
+			<form name="sendin" action="$(link-login-only)" method="post">
+				<input type="hidden" name="username" />
+				<input type="hidden" name="password" />
+				<input type="hidden" name="dst" value="$(link-orig)" />
+				<input type="hidden" name="popup" value="true" />
+			</form>
+			
+			<script type="text/javascript" src="/md5.js"></script>
+			<script type="text/javascript">
+			<!--
+				function doLogin() {
+				document.sendin.username.value = document.login.username.value;
+				document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+				document.sendin.submit();
+				return false;
+				}
+			//-->
+			</script>
+		$(endif)
+        <!-- Top content -->
+        <div class="top-content">
+        	
+            <div class="inner-bg">
+                <div class="container">
+                	
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2 text">
+                            <h1><strong>tukangcoding</strong> hotspot</h1>
+                            <div class="description hide">
+                            	<p>
+	                            	This is a free responsive <strong>"login and register forms"</strong> template made with Bootstrap. 
+	                            	Download it on , 
+	                            	customize and use it as you like!
+                            	</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2">
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li class="nav-item active">
+                                    <a class="nav-link active" data-toggle="tab" href="#home" role="tab">Login</a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="nav-link" data-toggle="tab" href="#hrg" role="tab">Paket</a>
+                                </li>
+                                <!--<li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#reg" role="tab">Daftar</a>
+                                </li>-->
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#contact" role="tab">Kami</a>
+                                </li>
+                            </ul>
+                            <!-- TAB Content -->
+                            <div class="tab-content">
+                                <!-- START LOGIN -->
+                                <div class="tab-pane active" id="home" role="tabpanel">
+                                    <div class="form-box">
+                                        <div class="form-top">
+                                            <div class="form-top-left">
+                                                <h3>Masuk</h3>
+                                                <p>User dan password:</p>
+                                            </div>
+                                            <div class="form-top-right">
+                                                <i class="fa fa-lock"></i>
+                                            </div>
+                                        </div>
+                                        <div class="form-bottom">
+                                            <form role="form" name="login" class="login-form" action="$(link-login-only)" method="post" $(if chap-id) onSubmit="return doLogin()" $(endif)>
+                                                <input type="hidden" name="dst" value="$(link-orig)" />
+                                                <input type="hidden" name="popup" value="true" />
+                                                <div class="form-group">
+                                                    <label class="sr-only" for="form-username">Username</label>
+                                                    <input name="username" type="text" value="$(username)" placeholder="Username..." class="form-username form-control" id="form-username" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="sr-only" for="form-password">Password</label>
+                                                    <input name="password" type="password" placeholder="Password..." class="form-password form-control" id="form-password" />
+                                                </div>
+                                                <button type="submit" class="btn">Lanjutkan..!!</button>
+                                            </form>
+
+                                            $(if error)<div style="color: #FF8080; font-size: 9px">$(error)</div>$(endif)
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END LOGIN -->
+                                
+
+                                <!-- START HRG -->
+                                <div class="tab-pane " id="hrg" role="tabpanel">
+                                    <div class="form-box">
+                                        <div class="form-top">
+                                            <div class="form-top-left">
+                                                <h3>Harga Paket</h3>
+                                                <!--<p>Fill in the form below to get instant access:</p>-->
+                                            </div>
+                                            <div class="form-top-right">
+                                                <i class="fa fa-money"></i>
+                                            </div>
+                                        </div>
+                                        <div class="form-bottom" style="color:#FFF">
+                                            <div class="row">
+                                                $(if trial == 'yes')
+                                                <div class="col-sm-6 col-md-6 col-lg-6">
+                                                    <!-- PRICE ITEM -->
+                                                    <div class="panel price panel-green">
+                                                        <div class="panel-body text-center">
+                                                            <p class="lead" ><strong>free wifi</strong></p>
+                                                        </div>                                                        
+                                                        <ul class="list-group list-group-flush text-center">
+                                                                <li class="list-group-item"><i class="icon-ok text-danger"></i> Pengunaan 5 menit </li>
+                                                                <li class="list-group-item"><i class="icon-ok text-danger"></i> Unlimited quota</li>
+                                                                <li class="list-group-item"><i class="icon-ok text-danger"></i> kecepatan 5mbps</li>
+                                                        </ul>
+                                                        
+                                                        <div class="panel-footer">
+                                                                <a class="btn btn-lg btn-block btn-success" href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)">free wifi</a>
+                                                        </div>    
+
+
+                                                    </div>
+                                                    <!-- /PRICE ITEM -->                                                
+                                                </div>
+                                                $(endif)
+                                                
+
+                                                <div class="col-sm-3 col-md-6 col-lg-6">
+                                                        <!-- PRICE ITEM -->
+                                                        <div class="panel price panel-blue">
+                                                            <div class="panel-body text-center">
+                                                                <p class="lead" ><strong>Rp.5000 / 12jam</strong></p>
+                                                            </div>                                                        
+                                                            <ul class="list-group list-group-flush text-center">
+                                                                <li class="list-group-item"><i class="icon-ok text-danger"></i> Penggunaan 12jam</li>
+                                                                <li class="list-group-item"><i class="icon-ok text-danger"></i> Unlimited quota</li>
+                                                                <li class="list-group-item"><i class="icon-ok text-danger"></i> kecepatan 1mbps</li>
+                                                            </ul>                                                            
+                                                        </div>
+                                                        <!-- /PRICE ITEM -->                                                
+                                                    </div>
+                                                    
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <!-- START REG -->
+                                <div class="tab-pane " id="reg" role="tabpanel">
+                                    <div class="form-box">
+                                        <div class="form-top">
+                                            <div class="form-top-left">
+                                                <h3>Daftar sekarang</h3>
+                                                <p>Form pendaftaran:</p>
+                                            </div>
+                                            <div class="form-top-right">
+                                                <i class="fa fa-pencil"></i>
+                                            </div>
+                                        </div>
+                                            <div class="form-bottom">
+                                                <form role="form" action="http://tukangcoding.net/kirimemail.php" method="post" class="registration-form">
+                                                    <div class="form-group">
+                                                        <label class="sr-only" for="form-first-name">Nama Lengkap</label>
+                                                        <input type="text" name="t_nama" placeholder="Nama Lengkap..." class="form-first-name form-control" id="form-first-name" />
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="sr-only" for="form-last-name">Durasi (jam)</label>
+                                                        <input type="text" name="t_durasi" placeholder="Durasi (jam)..." class="form-last-name form-control" id="form-last-name" />
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="sr-only" for="form-email">Nomor HP</label>
+                                                        <input type="text" name="t_hp" placeholder="Nomor HP..." class="form-HP form-control" id="form-HP" />
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="sr-only" for="form-email">Email</label>
+                                                        <input type="text" name="t_email" placeholder="Email..." class="form-email form-control" id="form-email" />
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="sr-only" for="form-about-yourself">Pesan khusus</label>
+                                                        <textarea name="txt_note" placeholder="Pesan khusus..."
+                                                                  class="form-about-yourself form-control" id="form-about-yourself"></textarea>
+                                                    </div>
+                                                    <button type="submit" class="btn">Kirim</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                </div>
+                                
+                                <div class="tab-pane " id="contact" role="tabpanel">
+                                        <div class="form-box">
+                                            <div class="form-top">
+                                                <div class="form-top-left">
+                                                    <h3>Hubungi kami</h3>
+                                                    <p>Informasi lebih lanjut:</p>
+                                                </div>
+                                                <div class="form-top-right">
+                                                    <i class="fa fa-phone"></i>
+                                                </div>
+                                            </div>
+                                            <div class="form-bottom" style="color:#FFF">
+                                                <div class="row">
+                                                    <div class="col-sm-8">
+                                                        <h4>Lokasi:</h4>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                            <p><i class="fa fa-phone"></i> 085771838355</p>
+                                                            <p><i class="fa fa-phone"></i> 082227965900</p>
+                                                            <p><i class="fa fa-envelope"></i> diptasoft@gmail.com</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+    
+                                    </div>
+
+
+
+                                </div>
+
+
+
+
+                        </div>
+                    </div>
+                   <!-- <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2">
+
+                            <div class="social-login">
+                                <h3>Layanan Free :</h3>
+                                <div class="social-login-buttons">
+                                    <a class="btn btn-link-2" href="https://google.com">
+                                        <i class="fa fa-google"></i> Google
+                                    </a>
+                                    <a class="btn btn-link-2 hide" href="https://facebook.com">
+                                        <i class="fa fa-facebook"></i> Facebook
+                                    </a>
+                                    <a class="btn btn-link-2 hide" href="https://twitter.com">
+                                        <i class="fa fa-twitter"></i> Twitter
+                                    </a>
+                                    
+                                    $(if trial == 'yes')
+                                    <a class="btn btn-link-2 " href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)">
+                                        <i class="fa fa-wifi"></i> free wifi
+                                    </a>
+                                    $(endif)
+                                
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                        -->
+                    
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Footer -->
+        <footer>
+        	<div class="container">
+        		<div class="row">
+        			
+        			<div class="col-sm-8 col-sm-offset-2">
+        				<div class="footer-border"></div>
+        				<p><a href="http://tukangcoding.net" target="_blank"><strong>tukangcoding.net</strong></a> 
+        					<br/>RT/RW Net internet murah meriah. <i class="fa fa-smile-o"></i></p>
+        			</div>
+        			
+        		</div>
+        	</div>
+        </footer>
+
+        <!-- Javascript -->
+        <script src="assets/js/jquery-1.11.1.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/js/jquery.backstretch.min.js"></script>
+        <script src="assets/js/scripts.js"></script>
+        
+        <!--[if lt IE 10]>
+            <script src="assets/js/placeholder.js"></script>
+        <![endif]-->
+
+    </body>
+
+</html>
